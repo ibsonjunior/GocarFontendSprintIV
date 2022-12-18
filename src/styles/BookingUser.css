@@ -1,4 +1,20 @@
 .bookings_cards{
-    height: 100vh;
+    min-height: 100vh;
     width:100vw;
+    display:row;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 60px;
+   background-color: rgb(236, 236, 236);;
+}
+
+.bookingGaleria{
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.bookings_cards h1{
+    font-family: Roboto;
+    text-align: center;
+    margin-top: 1%;
 }

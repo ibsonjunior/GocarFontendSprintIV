@@ -47,11 +47,11 @@ function BookingDetails({ product, form, setDate, submit }) {
 
   // Para lançar no api
   const initalDay = calendar?.map((date) => {
-    return format(date.startDate, "MM/dd/yyyy");
+    return format(date.startDate, "yyyy-MM-dd");
   });
 
   const finalDay = calendar?.map((date) => {
-    return format(date.endDate, "MM/dd/yyyy");
+    return format(date.endDate, "yyyy-MM-dd");
   });
 
   const formatApiInitalDay = initalDay[0];

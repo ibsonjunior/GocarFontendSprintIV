@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-import Logo from "../../../assets/logo_gocar.png";
-
 import { Link, useLocation } from "react-router-dom";
 
 import {
@@ -24,22 +22,24 @@ function MainHeader() {
   return (
     <>
       {["sm"].map((expand) => (
-        <Navbar key={expand} expand={expand} className="mb-3">
+        <Navbar key={expand} expand={expand} className="mb-3" style={{ backgroundColor: '#01010A' }} >
           <Container fluid>
             <Navbar.Brand>
               <Link to="/">
                 <img
-                  src={Logo}
-                  width="100"
-                  height="30"
+                  src="https://pi-group01-gocar-bucket.s3.amazonaws.com/assets/gocar_log.png"
+                  width="150"
+                  height="45"
                   className="align-top ml-4"
                   alt="LOGO"
+                  
                 />
               </Link>
             </Navbar.Brand>
             <Navbar.Toggle
+
               aria-controls={`offcanvasNavbar-expand-${expand}`}
-              style={{ background: "white" }}
+              style={{ backgroundColor: 'white' }}
               variant="outline-disabled"
             />
             <Navbar.Offcanvas
@@ -52,7 +52,7 @@ function MainHeader() {
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
                   <Link to="/">
                     <img
-                      src={Logo}
+                       src="https://pi-group01-gocar-bucket.s3.amazonaws.com/assets/gocar_log.png"
                       width="100"
                       height="30"
                       className="align-top ml-4"

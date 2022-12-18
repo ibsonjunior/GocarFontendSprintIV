@@ -31,7 +31,7 @@ function BookingForm({ products }) {
     ) {
       alert("Preencha todos os dados...");
     } else {
-      fetch(`http://54.159.110.183:8081/bookings`, {
+      fetch(`https://gocarback.ctdprojetos.com.br/bookings`, {
         method: "POST",
         headers: {
           Accept: "*/* , application/json, text/plain ",

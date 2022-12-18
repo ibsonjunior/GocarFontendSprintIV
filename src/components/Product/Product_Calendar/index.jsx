@@ -15,9 +15,7 @@ function ProductCalendar({ product }) {
   const result = rent * 300;
 
   const usuarioLogado = localStorage.getItem("token");
-
   const location = useLocation();
-
   return (
     <>
       <div className="calendar">

@@ -1,4 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
+
 import { Context } from "../Context/Context";
 
 import ProductHeader from "../components/Product/Product_Header";
@@ -17,7 +18,6 @@ import { ShareNetwork, Heart } from "phosphor-react";
 function Product() {
   //Informações que vem da API
   const { products, productImages } = useContext(Context);
-  console.log("productsssssssssssssssss", products)
   // Id do Produto/Parâmetro
   const { id } = useParams();
   //Mudança de estado de acordo com o tamanho da tela

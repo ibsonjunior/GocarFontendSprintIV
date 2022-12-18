@@ -1,3 +1,10 @@
+/* Fonte de marcação = Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+/* Fonte Comun no texto = Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+
 * {
   margin: 0;
   padding: 0;
@@ -11,14 +18,14 @@ html {
   overflow-x: hidden;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
   overflow-y: hidden;
-}
+} */
 
 .body {
   width: 100vw;
@@ -30,29 +37,38 @@ h6 {
 .navbar,
 .navbar-expand-lg,
 .navbar-light {
+  margin-bottom: 0% !important;
   padding: 0;
-  padding-top: 2vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
   overflow-x: hidden;
-}
+} 
 
 .second_header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 10%;
   width: 100vw;
   height: fit-content;
-  min-height: 22vh;
-  background-color: #f48240;
-  color: white;
-  padding-bottom: 1%;
+  min-height: 26vh;
+  background-color: #EDECEB;
+  color: #01010A;
+  font-family: Montserrat;
 }
 
+/* _____SEARCH-BLOCK_____ */
 .second_header input {
   padding: 4px;
   border: none;
-  width: 20vw;
+  width: 15vw;
   height: fit-content;
+  text-align: center;
+}
+
+.titulofilter{
+  font-size: 200%;
 }
 
 .options {
@@ -64,29 +80,40 @@ h6 {
   width: 80vw;
 }
 
+.btn_header{
+background-color: #a9a5a5 !important;
+}
+
+
 .input_flex {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  
 }
 
 .text_d {
   margin: 8px;
 }
 
+.selecione{
+  font-family: Montserrat;
+}
+
+
 .date {
   color: rgb(80, 78, 80);
-  height: fit-content;
-  width: fit-content;
-  padding: 1.5px;
+  width: 25vw;
+  padding: 4px;
   border: none;
   border-radius: 6px;
+  background-color: rgb(255, 255, 255);
 }
 
 .box {
   width: 50vw;
-  height: 0vh;
+  height: none;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -103,14 +130,11 @@ h6 {
   align-self: center;
 }
 
-.showcalendar{
-  height: auto;
-  animation: fade-in 0.7s ease-in;
-}
+
 
 .hiden {
   height: 0vh;
-  animation: fade-out 0.7s ease-in;
+  /* animation: fade-in 0.7s ease-in; */
 }
 
 @keyframes fade-in {
@@ -124,16 +148,6 @@ h6 {
   }
 }
 
-@keyframes fade-out {
-  0% {
-    opacity: 1;
-    height: auto;
-  }
-  100% {
-    opacity: 0;
-    height: 0;
-  }
-}
 
 .btn_header {
   width: 8vw;
@@ -174,8 +188,13 @@ h6 {
 }
 
 .recomendations_title {
+  padding: 2%;
   text-align: center;
   overflow-y: hidden;
+  font-family: Montserrat;
+  font-weight: 300;
+  font-size: 240%;
+  color: #EDECEB
 }
 
 .recomendations {
@@ -188,9 +207,10 @@ h6 {
 
 .recomendacoes {
   margin-top: 2rem;
-  background-color: rgb(163, 160, 160);
+  background-color: #010116;
   overflow-x: hidden;
 }
+
 
 /*Card dos produtos*/
 .galeria_carro {
@@ -204,7 +224,7 @@ h6 {
   align-items: flex-start;
   justify-content: space-around;
   width: 45vw;
-  height: 43vh;
+  height: fit-content;
   padding: 0.5rem;
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -225,6 +245,24 @@ h6 {
   height: auto;
   width: fit-content;
   overflow-y: hidden;
+  font-family: Montserrat;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card_title h3 {
+  font-size: 250%;
+}
+.card_title h4 {
+  font-size: 180%;
+  color: #e8722d;
+  font-weight: 550;
+}
+
+.card_title p {
+  font-size:105%;
 }
 
 .card_description {
@@ -269,7 +307,7 @@ h6 {
 .button_car {
   width: fit-content;
   height: fit-content;
-  background-color: #e8722d;
+  background-color: #8f8d8c;
   color: white;
   padding: 6px;
   border: none;
@@ -285,6 +323,26 @@ h6 {
   -webkit-box-orient: vertical;
   overflow-y: hidden;
 }
+
+.clients{
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 6%;
+  background-color: rgb(255, 255, 255);
+}
+
+.clientetitulo{
+  margin-top: 1%;
+  font-size: 230%;
+  /* text-decoration:underline #D37231; */
+}
+
+.clientsalinhar{
+  display:flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
 
 /* @media(min-width: 1024px) {
 
@@ -362,6 +420,10 @@ h6 {
   .btnCadastro {
     width: 30vw;
   }
+
+ 
+
+
 
   /* Bloco de pesquisa */
   .second_header {
@@ -474,6 +536,41 @@ h6 {
     overflow-x: hidden;
   }
 
+
+  .recomendations_title{
+    margin-top: 2%;
+    font-size: 160%;
+  }
+
+  .clientetitulo{
+    font-size: 25px;
+}
+ .alinhartext h3{
+
+  font-size: 18px;
+ }
+
+ .alinhartext p{
+
+  font-size: 13px;
+ }
+  .clientImg{
+    width: 100px;
+    height: 100px;
+    
+  }
+
+  .carousel-indicators [data-bs-target]{
+  display: none;
+ }
+
+  .titulofilter{
+    text-align: center;
+    margin-bottom: 2%;
+    font-size:120%;
+    font-weight: 500;
+  }
+
   .options {
     display: block;
     overflow-x: hidden;
@@ -567,6 +664,9 @@ h6 {
 
   .box {
     width: fit-content;
+  }
+  .circle1{
+    display: none;
   }
 
 }

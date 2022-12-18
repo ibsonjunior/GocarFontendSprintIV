@@ -3,13 +3,13 @@ import React, { createContext, useState, useEffect } from "react";
 export const Context = createContext({});
 
 const ContextProvider = ({ children }) => {
+  
   const [categories, setCategories] = useState([]);
   const [cities, setCities] = useState([]);
   const [products, setProducts] = useState([]);
   const [productImages, setProductImages] = useState([]);
   const [productBookings, setProductBookings] = useState([]);
-  //BookingUser
-  const [bookingsUser, setBookingsUser] = useState([]);
+
   const [calendar, setCalendar] = useState([
     {
       startDate: new Date(),
@@ -22,7 +22,7 @@ const ContextProvider = ({ children }) => {
   const [rent, setRent] = useState();
 
   // Categories
-  const urlCategories = "http://100.24.39.208:8081/categories";
+  const urlCategories = "https://gocarback.ctdprojetos.com.br/categories";
   useEffect(() => {
     fetch(urlCategories)
       .then((responseCategories) => responseCategories.json())
@@ -30,7 +30,7 @@ const ContextProvider = ({ children }) => {
   }, []);
 
   // Cities
-  const urlCities = "http://100.24.39.208:8081/cities";
+  const urlCities = "https://gocarback.ctdprojetos.com.br/cities";
   useEffect(() => {
     fetch(urlCities)
       .then((responseCities) => responseCities.json())
@@ -38,7 +38,7 @@ const ContextProvider = ({ children }) => {
   }, []);
 
   // Products
-  const urlProducts = "http://100.24.39.208:8081/products";
+  const urlProducts = "https://gocarback.ctdprojetos.com.br/products";
   useEffect(() => {
     fetch(urlProducts)
       .then((responseProducts) => responseProducts.json())
@@ -46,7 +46,7 @@ const ContextProvider = ({ children }) => {
   }, []);
 
   // Images
-  const urlImages = "http://100.24.39.208:8081/images";
+  const urlImages = "https://gocarback.ctdprojetos.com.br/images";
   useEffect(() => {
     fetch(urlImages)
       .then((responseImages) => responseImages.json())
@@ -54,24 +54,15 @@ const ContextProvider = ({ children }) => {
   }, []);
 
   // Bookings
-  const urlBookings = "http://100.24.39.208:8081/bookings";
+  const urlBookings = "https://gocarback.ctdprojetos.com.br/bookings";
   useEffect(() => {
-      fetch(urlBookings)
-        .then((responseCars) => responseCars.json())
-        .then((reservas) => {
-            let a = reservas.filter((b) => b.id > 3 )
-            return setProductBookings(a);
-        } );      
+    fetch(urlBookings)
+      .then((responseCars) => responseCars.json())
+      .then((reservas) => {
+        let a = reservas.filter((b) => b.id > 0);
+        return setProductBookings(a);
+      });
   }, []);
-
- 
-  useEffect(() => {
-      fetch(urlBookings)
-        .then((responseCars) => responseCars.json())
-        .then((bookinsJSON) => setBookingsUser(bookinsJSON));
-      }, []);
-
-      console.log("Bookings Context", bookingsUser);
 
   return (
     <Context.Provider
@@ -86,13 +77,10 @@ const ContextProvider = ({ children }) => {
         setProductImages,
         productBookings,
         setProductBookings,
-        bookingsUser,
-        setBookingsUser,
         calendar,
         setCalendar,
         rent,
-        setRent
-    
+        setRent,
       }}
     >
       {children}

@@ -32,7 +32,7 @@ const SignInForm = () => {
     },
     validate,
     onSubmit: (values) => {
-      fetch(`http://54.159.110.183:8081/api/auth/signin`, {
+      fetch(`https://gocarback.ctdprojetos.com.br/api/auth/signin`, {
         method: "POST",
         headers: {
           Accept: "*/* , application/json, text/plain ",
@@ -54,6 +54,7 @@ const SignInForm = () => {
               localStorage.setItem("name", data.name);
               localStorage.setItem("lastname", data.lastname);
               localStorage.setItem("email", data.username);
+              localStorage.setItem("roles", data.roles);
 
             });
           setTimeout(() => {

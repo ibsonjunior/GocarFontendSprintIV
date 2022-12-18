@@ -9,20 +9,16 @@ function HomeCategories() {
 
   return (
     <div className="categories">
-      <h3 className="categories_title">Categorias</h3>
+      <h3 className="categories_title">C A T E G O R I A S</h3>
       <div className="categories_cards">
         {categories?.map((categories) => (
           <div key={categories.id} className="card_category">
             <div className="category_img">
               {" "}
-              <img src={categories.urlImage} alt="" />
+              <img className="imgh" src={categories.urlImage} alt="" />
             </div>
             <div className="category_info">
-              <h2>{categories.qualification} </h2>
-              <p>
-                {" "}
-                <strong>{categories.products.length}</strong> Unidades
-              </p>
+              <h2>{categories.qualification}</h2>
             </div>
           </div>
         ))}

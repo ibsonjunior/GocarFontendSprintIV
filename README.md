@@ -1,2 +1,0 @@
-# GocarFontendSprintIV
-SprintIV

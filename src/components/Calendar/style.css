@@ -9,12 +9,14 @@
     border-radius: 10px;
     padding: 16px;
     margin: 0.5rem;
+    overflow: hidden;
 }
 
 .calendar_container_card_dates {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .rdrCalendarWrapper {
