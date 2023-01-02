@@ -1,0 +1,80 @@
+.card_main1 {
+    /* margin: 5%; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 28vw;
+    height: fit-content;
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+  }
+
+.alinharbook{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.bookings_cards{
+    height: 100vh;
+    width:100%;
+    display:row;
+   justify-content: center;
+   align-items: center;
+   background-color: rgb(236, 236, 236);
+   margin-bottom: 5%;
+}
+
+.bookingGaleria{
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.bookings_cards h1{
+    font-family: Roboto;
+    text-align: center;
+    margin-top: 1%;
+}
+
+.circle{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #171723;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: aliceblue;
+}
+
+.galeria_carro5 {
+    justify-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 0px) and (max-width: 480px) {
+    .galeria_carro5 {
+      grid-template-columns: 1fr;
+    }
+
+    .card_main1 {
+        width: 65vw;
+        height: fit-content;
+      }
+
+  }
+
+  @media (min-width: 769px) and (max-width: 1023px) {
+
+  
+
+
+  }
+  

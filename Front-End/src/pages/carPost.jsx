@@ -1,0 +1,45 @@
+import React from "react";
+
+import "../styles/BookingDone.css";
+
+import { Container, Card } from "react-bootstrap";
+
+import { CircleWavyCheck } from "phosphor-react";
+
+import { Link } from "react-router-dom";
+
+function clearCache2() {
+  localStorage.removeItem("nameNewCar");
+  localStorage.removeItem("ImagemAdm");
+  localStorage.removeItem("ImagemAdm1");
+  localStorage.removeItem("ImagemAdm2");
+  localStorage.removeItem("ImagemAdm3");
+  localStorage.removeItem("ImagemAdm4");
+  localStorage.removeItem("ImagemAdm5");
+  localStorage.removeItem("idNewCar");
+}
+
+
+function BookingDone() {
+  return (
+    <>
+      <Container fluid className="booking_done_container">
+        <Card className="booking_done_card">
+          <CircleWavyCheck size={120} className="booking_done_check-item" />
+
+          <h1 className="booking_done_title">Parabens!</h1>
+
+          <h3 className="booking_done_description">
+            Seu produto foi  cadastrado com sucesso
+          </h3>
+
+          <Link to="/">
+            <button className="booking_done_button" onClick={()=>{clearCache2()}}>Ok</button>
+          </Link>
+        </Card>
+      </Container>
+    </>
+  );
+}
+
+export default BookingDone;
